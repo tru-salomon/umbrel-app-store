@@ -2,7 +2,7 @@ manifestVersion: 1
 id: tru-sal
 category: developer
 name: Paperclip (patched)
-version: "1012-patched-1"
+version: "1106-patched-1"
 tagline: Paperclip with Claude token auto-refresh
 description: Personal patched build of Paperclip.
 developer: tru-salomon

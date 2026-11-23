@@ -1,17 +1,37 @@
 manifestVersion: 1
 id: tru-sal-paperclip
-category: developer
+category: ai
 name: Paperclip (patched)
-version: "1106-patched-2.1"
-tagline: Paperclip with Claude token auto-refresh
-description: Personal patched build of Paperclip.
-developer: tru-salomon
+version: "1106-patched-2.0.2"
+tagline: A team of AI agents, with Claude token auto-refresh
+icon: https://raw.githubusercontent.com/tru-salomon/umbrel-app-store/main/tru-sal-paperclip/icon.svg
+description: >-
+  Personal patched build of Paperclip 2026.1106.0. It adds server-side renewal
+  of Claude subscription OAuth tokens (upstream PR #15319), so Claude
+  subscription connections keep working past the 8-hour token expiry.
+
+
+  Paperclip is a self-hosted control center for running AI agents like a team.
+  Create a company, set a goal, hire agents with roles and reporting lines, then
+  review their plans, approve important decisions, and track their work from one
+  dashboard.
+
+
+  Paperclip does not include an AI model by itself. Connect your own provider
+  keys or subscriptions. Provider usage may incur costs, so set budgets before
+  letting agents run unattended.
+developer: Paperclip Labs, Inc. (patched by tru-salomon)
 website: https://github.com/tru-salomon/paperclip
 dependencies: []
 repo: https://github.com/tru-salomon/paperclip
 support: https://github.com/tru-salomon/paperclip/issues
 port: 8870
+gallery:
+  - https://getumbrel.github.io/umbrel-apps-gallery/paperclip/1.webp
+  - https://getumbrel.github.io/umbrel-apps-gallery/paperclip/2.webp
+  - https://getumbrel.github.io/umbrel-apps-gallery/paperclip/3.webp
+  - https://getumbrel.github.io/umbrel-apps-gallery/paperclip/4.webp
+  - https://getumbrel.github.io/umbrel-apps-gallery/paperclip/5.webp
 path: ""
 submitter: tru-salomon
-releaseNotes: ""
-icon: https://raw.githubusercontent.com/tru-salomon/umbrel-app-store/main/tru-sal-paperclip/icon.svg
+releaseNotes: "Patched 1106 build with Claude token auto-refresh."

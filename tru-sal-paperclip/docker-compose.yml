@@ -7,7 +7,7 @@ services:
       PROXY_AUTH_ADD: 'false'
     container_name: tru-sal-paperclip_app_proxy_1
   server:
-    image: ghcr.io/<tru-salomon/paperclip:patched-2e002084ba2d518cef58e1d673049ab034fb61df
+    image: ghcr.io/tru-salomon/paperclip:patched-2e002084ba2d518cef58e1d673049ab034fb61df
     user: '1000:1000'
     restart: on-failure
     environment:

@@ -1,0 +1,32 @@
+version: '3.7'
+services:
+  app_proxy:
+    environment:
+      APP_HOST: tru-sal-paperclip_server_1
+      APP_PORT: 3100
+      PROXY_AUTH_ADD: 'false'
+    container_name: tru-sal-paperclip_app_proxy_1
+  server:
+    image: ghcr.io/<tru-salomon/paperclip:patched-2e002084ba2d518cef58e1d673049ab034fb61df
+    user: '1000:1000'
+    restart: on-failure
+    environment:
+      HOST: 0.0.0.0
+      PAPERCLIP_HOME: /paperclip
+      PAPERCLIP_PUBLIC_URL: https://${DEVICE_DOMAIN_NAME}:8870
+      PAPERCLIP_API_URL: http://127.0.0.1:3100
+      PAPERCLIP_ALLOWED_HOSTNAMES: >-
+        ${DEVICE_DOMAIN_NAME},${DEVICE_DOMAIN_NAME}:8870,${DEVICE_HOSTNAME},${DEVICE_HOSTNAME}:8870,${APP_DOMAIN},${APP_DOMAIN}:8870,${APP_HIDDEN_SERVICE},${APP_PAPERCLIP_LOCAL_IPS},tru-sal-paperclip_server_1
+      BETTER_AUTH_SECRET: ${APP_SEED}
+      PAPERCLIP_DEPLOYMENT_MODE: authenticated
+      PAPERCLIP_DEPLOYMENT_EXPOSURE: private
+      PAPERCLIP_TELEMETRY_DISABLED: '1'
+      DO_NOT_TRACK: '1'
+    volumes:
+      - type: bind
+        source: ${APP_DATA_ROOT}
+        target: /paperclip
+        read_only: false
+        bind:
+          create_host_path: false
+    container_name: tru-sal-paperclip_server_1

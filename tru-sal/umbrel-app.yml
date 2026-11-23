@@ -1,0 +1,16 @@
+manifestVersion: 1
+id: tru-sal
+category: developer
+name: Paperclip (patched)
+version: "1012-patched-1"
+tagline: Paperclip with Claude token auto-refresh
+description: Personal patched build of Paperclip.
+developer: tru-salomon
+website: https://github.com/tru-salomon/paperclip
+dependencies: []
+repo: https://github.com/tru-salomon/paperclip
+support: https://github.com/tru-salomon/paperclip/issues
+port: 8870
+path: ""
+submitter: tru-salomon
+releaseNotes: ""

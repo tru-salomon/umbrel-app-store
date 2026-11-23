@@ -2,7 +2,7 @@ manifestVersion: 1
 id: tru-sal-paperclip
 category: developer
 name: Paperclip (patched)
-version: "1106-patched-1"
+version: "1106-patched-2"
 tagline: Paperclip with Claude token auto-refresh
 description: Personal patched build of Paperclip.
 developer: tru-salomon
@@ -14,3 +14,4 @@ port: 8870
 path: ""
 submitter: tru-salomon
 releaseNotes: ""
+icon: https://raw.githubusercontent.com/tru-salomon/umbrel-app-store/main/tru-sal-paperclip/icon.svg
